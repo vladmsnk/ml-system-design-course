@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Окружения
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Кеши инструментов
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ноутбуки
+.ipynb_checkpoints/
+
+# Данные, модели, артефакты экспериментов — живут в DVC / MLflow
+data/
+models/
+mlruns/
+mlartifacts/
+*.parquet
+*.pcap
+
+# IDE и ОС
+.idea/
+.vscode/
+.DS_Store
