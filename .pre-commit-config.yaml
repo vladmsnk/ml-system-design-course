@@ -1,0 +1,46 @@
+# Установка: make install (или pre-commit install)
+# Прогнать на всём репозитории: make check (или pre-commit run --all-files)
+# Обновить версии хуков: pre-commit autoupdate
+
+default_language_version:
+  python: python3
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: check-yaml
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: detect-private-key
+      # Датасеты и веса моделей — в DVC, не в git
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: no-commit-to-branch
+        args: [--branch, main]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.3
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v2.4.0
+    hooks:
+      - id: mypy
+        files: ^(src|tests)/
+        additional_dependencies: [pytest]
+
+  # Чистим выводы ноутбуков: в git попадает код, а не мегабайты картинок
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.9.1
+    hooks:
+      - id: nbstripout
