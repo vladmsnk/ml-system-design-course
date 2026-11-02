@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="610" viewBox="0 0 1140 610" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B5563"/>
+    </marker>
+    <style>
+      .box { fill: #FFFFFF; stroke: #7C9CD6; stroke-width: 1.5; }
+      .box2 { fill: #FFFFFF; stroke: #6DB283; stroke-width: 1.5; }
+      .hl { fill: #E3F4E8; stroke: #2F8F4E; stroke-width: 2.5; }
+      .base { fill: #F5F5F5; stroke: #9CA3AF; stroke-width: 1.5; stroke-dasharray: 6 4; }
+      .t { font-size: 15px; font-weight: 600; fill: #111827; text-anchor: middle; }
+      .s { font-size: 12.5px; fill: #4B5563; text-anchor: middle; }
+      .edge { fill: none; stroke: #4B5563; stroke-width: 1.6; marker-end: url(#arrow); }
+      .lbl { font-size: 12px; fill: #6B7280; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1140" height="610" rx="12" fill="#FFFFFF"/>
+
+  <!-- Путь запроса -->
+  <rect x="20" y="20" width="1100" height="260" rx="12" fill="#EEF4FF" stroke="#C9D8F5"/>
+  <text x="36" y="268" font-size="14" font-weight="600" fill="#3B5998">Путь запроса · до 10 мс</text>
+
+  <rect class="box" x="40" y="60" width="180" height="80" rx="10"/>
+  <text class="t" x="130" y="86">Браузер или бот</text>
+  <text class="s" x="130" y="106">JS-сенсор на странице</text>
+
+  <rect class="box" x="245" y="60" width="180" height="80" rx="10"/>
+  <text class="t" x="335" y="86">Прокси</text>
+  <text class="s" x="335" y="106">TLS-отпечаток,</text>
+  <text class="s" x="335" y="123">порядок заголовков</text>
+
+  <rect class="box" x="450" y="60" width="180" height="80" rx="10"/>
+  <text class="t" x="540" y="86">Сбор событий</text>
+  <text class="s" x="540" y="106">+ ASN, тип сети, гео</text>
+
+  <rect class="box" x="655" y="60" width="180" height="80" rx="10"/>
+  <text class="t" x="745" y="86">Признаки сессии</text>
+  <text class="s" x="745" y="106">пересчёт на каждом</text>
+  <text class="s" x="745" y="123">событии</text>
+
+  <rect class="box" x="860" y="60" width="180" height="80" rx="10"/>
+  <text class="t" x="950" y="86">Скоринг</text>
+  <text class="s" x="950" y="106">базовая модель</text>
+  <text class="s" x="950" y="123">+ онлайн-слой</text>
+
+  <rect class="box" x="655" y="180" width="180" height="70" rx="10"/>
+  <text class="t" x="745" y="204">Решение</text>
+  <text class="s" x="745" y="223">пропустить, проверка,</text>
+  <text class="s" x="745" y="239">замедлить, блок</text>
+
+  <rect class="base" x="860" y="180" width="180" height="70" rx="10"/>
+  <text class="t" x="950" y="204">Базовая модель</text>
+  <text class="s" x="950" y="223">обучена заранее,</text>
+  <text class="s" x="950" y="239">меняется редко</text>
+
+  <path class="edge" d="M220,100 H243"/>
+  <path class="edge" d="M425,100 H448"/>
+  <path class="edge" d="M630,100 H653"/>
+  <path class="edge" d="M835,100 H858"/>
+  <path class="edge" d="M130,60 V44 H540 V58"/>
+  <text class="lbl" x="335" y="38" text-anchor="middle">события мыши, скролла и клавиш</text>
+  <path class="edge" d="M900,140 V160 H745 V178"/>
+  <path class="edge" d="M990,180 V142"/>
+  <path class="edge" d="M655,215 H335 V142"/>
+  <text class="lbl" x="495" y="208" text-anchor="middle">решение уходит в прокси</text>
+
+  <!-- Онлайн-обучение -->
+  <rect x="20" y="300" width="1100" height="290" rx="12" fill="#EEF8F0" stroke="#C5E3CC"/>
+  <text x="36" y="578" font-size="14" font-weight="600" fill="#2F7A45">Онлайн-обучение · модель обновляется на лету</text>
+
+  <path class="edge" d="M745,250 V290 H165 V338"/>
+  <text class="lbl" x="180" y="326">результаты проверок тоже идут в метки</text>
+
+  <rect class="box2" x="40" y="340" width="250" height="90" rx="10"/>
+  <text class="t" x="165" y="368">Метки из трафика</text>
+  <text class="s" x="165" y="390">ловушки, проверки, логины,</text>
+  <text class="s" x="165" y="408">свои боты на стенде</text>
+
+  <rect class="hl" x="360" y="340" width="280" height="90" rx="10"/>
+  <text class="t" x="500" y="368">Онлайн-слой</text>
+  <text class="s" x="500" y="390">сначала предсказать,</text>
+  <text class="s" x="500" y="408">потом учиться на каждой метке</text>
+
+  <rect class="box2" x="710" y="340" width="330" height="90" rx="10"/>
+  <text class="t" x="875" y="368">Откат</text>
+  <text class="s" x="875" y="390">если качество просело,</text>
+  <text class="s" x="875" y="408">возвращаемся к прошлой версии</text>
+
+  <rect class="box2" x="40" y="470" width="250" height="80" rx="10"/>
+  <text class="t" x="165" y="498">Детектор аномалий</text>
+  <text class="s" x="165" y="518">новое без меток</text>
+  <text class="s" x="165" y="535">уходит на проверку</text>
+
+  <rect class="box2" x="360" y="470" width="280" height="80" rx="10"/>
+  <text class="t" x="500" y="498">Детектор дрейфа</text>
+  <text class="s" x="500" y="520">трафик изменился, учимся быстрее</text>
+
+  <rect class="base" x="710" y="470" width="330" height="80" rx="10"/>
+  <text class="t" x="875" y="498">Возможно, LLM</text>
+  <text class="s" x="875" y="518">разбор новых сессий</text>
+  <text class="s" x="875" y="535">и разметка вместо человека</text>
+
+  <path class="edge" d="M290,385 H358"/>
+  <path class="edge" d="M640,385 H708"/>
+  <path class="edge" d="M165,470 V432"/>
+  <path class="edge" d="M470,430 V468"/>
+  <text class="lbl" x="462" y="455" text-anchor="end">ошибки</text>
+  <path class="edge" d="M530,470 V432"/>
+  <text class="lbl" x="538" y="455">дрейф</text>
+  <path class="edge" d="M1040,385 H1080 V100 H1042"/>
+  <text class="lbl" transform="translate(1098,240) rotate(-90)" text-anchor="middle">обновлённая модель</text>
+</svg>

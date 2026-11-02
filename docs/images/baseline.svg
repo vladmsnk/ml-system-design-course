@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="320" viewBox="0 0 1140 320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B5563"/>
+    </marker>
+    <style>
+      .box { fill: #FFFFFF; stroke: #7C9CD6; stroke-width: 1.5; }
+      .base { fill: #F5F5F5; stroke: #9CA3AF; stroke-width: 1.5; stroke-dasharray: 6 4; }
+      .eval { fill: #FFF8E6; stroke: #D9A520; stroke-width: 1.5; }
+      .t { font-size: 15px; font-weight: 600; fill: #111827; text-anchor: middle; }
+      .s { font-size: 12.5px; fill: #4B5563; text-anchor: middle; }
+      .edge { fill: none; stroke: #4B5563; stroke-width: 1.6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1140" height="320" rx="12" fill="#FFFFFF"/>
+
+  <rect class="box" x="30" y="120" width="180" height="80" rx="10"/>
+  <text class="t" x="120" y="150">Логи nginx</text>
+  <text class="s" x="120" y="170">и заголовки</text>
+
+  <rect class="box" x="250" y="120" width="200" height="80" rx="10"/>
+  <text class="t" x="350" y="146">Сессии</text>
+  <text class="s" x="350" y="166">cookie или IP + отпечаток,</text>
+  <text class="s" x="350" y="183">30 минут тишины</text>
+
+  <rect class="box" x="30" y="240" width="420" height="60" rx="10"/>
+  <text class="t" x="240" y="264">Метки</text>
+  <text class="s" x="240" y="284">свои боты и люди со стенда, открытый датасет</text>
+
+  <rect class="box" x="510" y="30" width="320" height="110" rx="10"/>
+  <text class="t" x="670" y="58">B0. Правила, как сейчас</text>
+  <text class="s" x="670" y="80">чёрный список датацентров,</text>
+  <text class="s" x="670" y="98">60 запросов в минуту на IP,</text>
+  <text class="s" x="670" y="116">капча после 5 неудачных логинов</text>
+
+  <rect class="base" x="510" y="180" width="320" height="110" rx="10"/>
+  <text class="t" x="670" y="208">B1. Базовая модель</text>
+  <text class="s" x="670" y="230">обучена один раз на открытом</text>
+  <text class="s" x="670" y="248">датасете и стенде,</text>
+  <text class="s" x="670" y="266">дальше не меняется</text>
+
+  <rect class="eval" x="880" y="100" width="230" height="120" rx="10"/>
+  <text class="t" x="995" y="128">Сравнение по неделям</text>
+  <text class="s" x="995" y="150">доля пойманных ботов при</text>
+  <text class="s" x="995" y="168">1% ложных блокировок и как</text>
+  <text class="s" x="995" y="186">она падает со временем</text>
+
+  <path class="edge" d="M210,160 H248"/>
+  <path class="edge" d="M450,160 H480 V85 H508"/>
+  <path class="edge" d="M480,160 V215 H508"/>
+  <path class="edge" d="M450,270 H508"/>
+  <path class="edge" d="M830,85 H855 V140 H878"/>
+  <path class="edge" d="M830,235 H855 V180 H878"/>
+</svg>
