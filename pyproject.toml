@@ -15,6 +15,12 @@ dev = [
     "pytest>=9.0",
     "ruff>=0.17",
 ]
+eda = [
+    "ipykernel>=7.0",
+    "matplotlib>=3.10",
+    "nbconvert>=7.16",
+    "pandas>=3.0",
+]
 
 [build-system]
 requires = ["hatchling"]
