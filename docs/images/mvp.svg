@@ -75,7 +75,7 @@
   <rect class="box2" x="40" y="340" width="250" height="90" rx="10"/>
   <text class="t" x="165" y="368">Метки из трафика</text>
   <text class="s" x="165" y="390">ловушки, проверки, логины,</text>
-  <text class="s" x="165" y="408">свои боты на стенде</text>
+  <text class="s" x="165" y="408">синтетические сессии</text>
 
   <rect class="hl" x="360" y="340" width="280" height="90" rx="10"/>
   <text class="t" x="500" y="368">Онлайн-слой</text>
